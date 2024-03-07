@@ -22,12 +22,12 @@ const ShoppingCart = () => {
   });
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem('cartItems') || '[]') as CartItem[]; // Преобразуем к типу CartItem[]
+    const items = JSON.parse(localStorage.getItem('cartItems') || '[]') as CartItem[];
     setCartItems(items);
     calculateTotalPrice(items);
   }, []);
 
-  const calculateTotalPrice = (items: CartItem[]) => { // Указываем тип для параметра items
+  const calculateTotalPrice = (items: CartItem[]) => {
     const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
     setTotalPrice(total);
   };
@@ -53,7 +53,6 @@ const ShoppingCart = () => {
     const phoneInput = document.getElementById('phone');
     const addressInput = document.getElementById('address');
 
-    // Проверка на заполненность полей
     // @ts-ignore
     if (!nameInput.value || !emailInput.value || !phoneInput.value || !addressInput.value || cartItems.length === 0) {
       alert('Please fill in all fields and add items to the cart before submitting the order.');
@@ -83,10 +82,9 @@ const ShoppingCart = () => {
         address: addressInput.value
       };
 
-      const response = await axios.post('http://localhost:3001/cart', orderData);
+      const response = await axios.post('http://3.67.97.66:3001/cart', orderData);
       console.log('Order submitted successfully:', response.data);
 
-      // Очистка полей формы
       // @ts-ignore
 
       nameInput.value = '';
@@ -100,7 +98,6 @@ const ShoppingCart = () => {
 
       addressInput.value = '';
 
-      // Очистка корзины после успешной отправки заказа
       localStorage.removeItem('cartItems');
       setCartItems([]);
       setTotalPrice(0);

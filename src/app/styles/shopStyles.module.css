@@ -1,5 +1,3 @@
-/* shopStyles.module.css */
-
 .shopContainer {
     display: flex;
     height: 100vh;
@@ -100,7 +98,7 @@
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     width: 100%;
-    box-sizing: border-box; /* чтобы учитывать padding и border в общей ширине элемента */
+    box-sizing: border-box;
 }
 
 .textarea {
@@ -109,6 +107,6 @@
     border-radius: 0.25rem;
     margin-bottom: 1rem;
     width: 100%;
-    resize: vertical; /* чтобы текстовая область могла быть изменена по вертикали */
-    box-sizing: border-box; /* чтобы учитывать padding и border в общей ширине элемента */
+    resize: vertical;
+    box-sizing: border-box;
 }

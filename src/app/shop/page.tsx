@@ -14,7 +14,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchShops = async () => {
       try {
-        const response = await fetch('http://localhost:3001/shop');
+        const response = await fetch('http://3.67.97.66:3001/shop');
         const data = await response.json();
         setShops(data.data);
       } catch (error) {
