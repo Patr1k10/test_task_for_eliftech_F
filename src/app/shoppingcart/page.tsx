@@ -11,8 +11,8 @@ interface CartItem {
 }
 
 const ShoppingCart = () => {
-  const [cartItems, setCartItems] = useState<CartItem[]>([]); // Указываем тип для cartItems
-  const [totalPrice, setTotalPrice] = useState<number>(0); // Указываем тип для totalPrice
+  const [cartItems, setCartItems] = useState<CartItem[]>([]); 
+  const [totalPrice, setTotalPrice] = useState<number>(0);
 
   const [customerInfo, setCustomerInfo] = useState({
     name: '',
@@ -82,7 +82,7 @@ const ShoppingCart = () => {
         address: addressInput.value
       };
 
-      const response = await axios.post('http://3.67.97.66:3001/cart', orderData);
+      const response = await axios.post('http://18.197.131.200:3001/cart', orderData);
       console.log('Order submitted successfully:', response.data);
 
       // @ts-ignore
