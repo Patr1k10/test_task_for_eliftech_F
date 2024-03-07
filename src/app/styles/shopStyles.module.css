@@ -1,0 +1,114 @@
+/* shopStyles.module.css */
+
+.shopContainer {
+    display: flex;
+    height: 100vh;
+}
+
+.shopsSection {
+    background-color: #f3f4f6;
+    width: 25%;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.shopTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.shopItem {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    list-style-type: none;
+    margin-left: -40px;
+
+}
+
+.shopItem:hover {
+    background-color: #edf2f7;
+}
+
+.productsSection {
+    flex: 2;
+}
+
+.productItem {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+
+.productInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.productName {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.productPrice {
+    font-size: 1.1rem;
+    color: #6b7280;
+}
+
+.addToCartBtn {
+    background-color: #4b5563;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+
+}
+
+.addToCartBtn:hover {
+    background-color: #374151;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* чтобы учитывать padding и border в общей ширине элемента */
+}
+
+.textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    resize: vertical; /* чтобы текстовая область могла быть изменена по вертикали */
+    box-sizing: border-box; /* чтобы учитывать padding и border в общей ширине элемента */
+}
