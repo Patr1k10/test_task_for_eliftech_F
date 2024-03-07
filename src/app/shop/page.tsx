@@ -7,14 +7,14 @@ import {Drug} from "@/type/drug";
 
 const Shop = () => {
 
-  const [shops, setShops] = useState<Shop[]>([]); // Явно указываем тип массива магазинов
-  const [selectedShop, setSelectedShop] = useState<Shop | null>(null); // Явно указываем тип для selectedShop
+  const [shops, setShops] = useState<Shop[]>([]);
+  const [selectedShop, setSelectedShop] = useState<Shop | null>(null); 
 
 
   useEffect(() => {
     const fetchShops = async () => {
       try {
-        const response = await fetch('http://3.67.97.66:3001/shop');
+        const response = await fetch('http://18.197.131.200:3001/shop');
         const data = await response.json();
         setShops(data.data);
       } catch (error) {
